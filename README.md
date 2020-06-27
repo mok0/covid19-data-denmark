@@ -68,12 +68,14 @@ that broke web scraping is recorded. The list of events before
 | 2020-05-16 | More exhaustive data provided in Table 1.1. New fields in tables 1.1 and 1.2                               |
 | 2020-05-20 | Section 1.1 title changed                                                                                  |
 | 2020-05-21 | Table 1.2 changed                                                                                          |
+| 2020-05-12 | SSI removes 6 wrongly categorised patients from deaths count                                               |
 | 2020-05-25 | Deal with date typo '24. ma' instead of '24. maj'                                                          |
 | 2020-06-08 | Deal with date typo 'juní' instead of 'juni'                                                               |
 | 2020-06-18 | Deal with typo in number of `recovered_accum` (12242 -> 11242) that made number of actives become negative |
 | 2020-06-20 | Data is not updated on 2020-06-20 and 2020-06-21 due to server maintenance.                                |
 | 2020-06-22 | Data collected during the weekend is reported on this date.                                                |
 | 2020-06-26 | Section 1.1, 2.4 and 3.7 titles changed.                                                                   |
+| 2020-06-27 | From this date, data is no longer updated on weekends.                                                     |
 
 
 ## License
