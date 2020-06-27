@@ -9,6 +9,12 @@ Health][2]. Although the the data is also available from the producer
 [Statens Serum Insitut][3] I found that the former web page changes far
 less frequently.
 
+June 17, 2020 SSI changed the definition of COVID-19 related
+hospitalizations to be defined as hospitalization occurring within 14
+days after the first positive test. Furthermore, patients still
+hospitalized 90 days after first positive tests are removed from the
+statistic. The numbers for hospitalizations (+ ICU, ventilators) have
+been updated accordingly.
 
 ## CSV Data File Content
 
