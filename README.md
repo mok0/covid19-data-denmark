@@ -76,7 +76,7 @@ that broke web scraping is recorded. The list of events before
 | 2020-06-22 | Data collected during the weekend is reported on this date.                                                |
 | 2020-06-26 | Section 1.1, 2.4 and 3.7 titles changed.                                                                   |
 | 2020-06-27 | From this date, data is no longer updated on weekends.                                                     |
-
+| 2020-07-21 | Section 3.7 title changed.                                                                                 |
 
 ## License
 
