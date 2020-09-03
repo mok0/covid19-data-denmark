@@ -52,7 +52,7 @@ following columns:
 
 (*) The data in the `hospitalized_admitted` column is extracted from
 the file `Newly_admitted_over_time.csv` that can be found in a zip-archive
-updated on weekdays and published on [SSI's web page][3].
+updated on weekdays and published on [SSIs web page][3].
 
 
 ## Log of Registered Changes to the Source Web Page
