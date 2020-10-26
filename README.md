@@ -79,6 +79,7 @@ that broke web scraping is recorded. The list of events before
 | 2020-07-21 | Section 3.7 title changed.                                                                                 |
 | 2020-08-24 | Scrape data from [SSI's webpage] which now includes weekend data
 | 2020-08-31 | Section 3.7 title changed.                                                                                 |
+| 2020-10-26 | Accumulated tests data for day 0 to 81 added from SSI's file Test_pos_over_time. |
 
 ## License
 
