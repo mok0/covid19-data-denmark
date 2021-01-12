@@ -16,7 +16,9 @@ hospitalized 90 days after first positive tests are removed from the
 statistic. The numbers for hospitalizations (+ ICU, ventilators) have
 been updated accordingly.
 
-## CSV Data File Content
+## Content CSV Data Files
+
+### covid19-data-denmark.csv
 
 The data contained in the file `covid19-data-denmark.csv` includes the
 following columns:
@@ -54,6 +56,40 @@ following columns:
 the dataset `Newly_admitted_over_time.csv` that can be found in a zip-archive
 updated on weekdays and published on [SSIs web page][3].
 
+
+### vaccinations.csv
+
+This file contains data of COVID-19 vaccinations.
+
+- `day`: days since Monday 2020-02-24, the first day of the week where
+  the first COVID-19 cases were first recorded in Denmark.
+- `date`: The date in ISO 8601 format.
+- `week`: The ISO week number.
+- `vaccination1_accum`: Accumulated number of first vaccination
+- `vaccination1_today`: Today's number of first vaccination
+- `vaccination2_accum`: Accumulated number of second vaccination
+- `vaccination2_today`: Today's number of second vaccination
+
+
+### private_testing.csv
+
+This file contains data from private testing facilities. It is not known how many
+of these patients also have been tested in the public testing system. Indeed
+it is quite likely that patients with positive antigen test have their results confirmed
+by taking a test in the public system, which is free.
+
+- `day`: days since Monday 2020-02-24, the first day of the week where
+  the first COVID-19 cases were first recorded in Denmark.
+- `date`: The date in ISO 8601 format.
+- `week`: The ISO week number.
+- `tests_pcr_accum`: Performed PCR tests, accumulated
+- `tests_pcr_today`: Performed PCR tests, today
+- `infected_pcr_accum`: Infected patients found by PCR testing, accumulated
+- `infected_pcr_today`: Infected patients found by PCR testing, today
+- `tests_ag_accum`: Performed antigen tests, accumulated
+- `tests_ag_today`: Performed antigen tests, today
+- `infected_ag_accum`: Infected patients found by antigen testing, accumulated
+- `infected_ag_today`: Infected patients found by antigen testing, today
 
 ## Log of Registered Changes to the Source Web Page
 
