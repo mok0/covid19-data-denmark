@@ -59,7 +59,8 @@ updated on weekdays and published on [SSIs web page][3].
 
 ### vaccinations.csv
 
-This file contains data of COVID-19 vaccinations.
+This file contains data of COVID-19 vaccinations, extracted from a PDF
+file published by SSI on weekdays.
 
 - `day`: days since Monday 2020-02-24, the first day of the week where
   the first COVID-19 cases were first recorded in Denmark.
@@ -73,10 +74,13 @@ This file contains data of COVID-19 vaccinations.
 
 ### private_testing.csv
 
-This file contains data from private testing facilities. It is not known how many
-of these patients also have been tested in the public testing system. Indeed
-it is quite likely that patients with positive antigen test have their results confirmed
-by taking a test in the public system, which is free.
+This file contains data from private testing providers, extracted
+from a PDF file published by SSI on weekdays. It is not known how many
+of these patients also have been tested in the public testing system.
+Indeed it is quite likely that patients with positive antigen test
+have their results confirmed by taking a test in the public system,
+which is free. Therefore, the data in this table cannot be added to
+the data in the file `covid19-data-denmark.csv`.
 
 - `day`: days since Monday 2020-02-24, the first day of the week where
   the first COVID-19 cases were first recorded in Denmark.
@@ -117,6 +121,7 @@ that broke web scraping is recorded. The list of events before
 | 2020-08-31 | Section 3.7 title changed.                                                                                 |
 | 2020-10-26 | Accumulated tests data for day 0 to 81 added from SSI's file `Test_pos_over_time.csv`. |
 | 2020-10-27 | Between 2020-06-19 and 2020-08-24 data was reported collectively on mondays, weekend data in this range interpolated. |
+| 2021-01-12 | Added data files `vaccinations.csv` and `private_testing.csv` |
 
 ## License
 
