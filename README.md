@@ -95,6 +95,24 @@ the data in the file `covid19-data-denmark.csv`.
 - `infected_ag_accum`: Infected patients found by antigen testing, accumulated
 - `infected_ag_today`: Infected patients found by antigen testing, today
 
+### mutant_data.csv
+
+This file contains sequencing data on positive SARS-CoV-2 samples. The
+data is extracted from the statistics page of the [Danish Covid-19 Genome Consortium](https://www.covid19genomics.dk).
+The data is aggregated per week.
+
+- `day`: The day number of the last day of the week (Sunday). Day zero
+        is Monday 2020-02-24, the first day of the week where the
+        first COVID-19 cases were first recorded in Denmark.
+- `year`: The year
+- `week`: Week number of the year.
+- `variant`: The genome variant.
+- `ireg`: The region number.
+- `region`: The region name
+- `positive`: Number of variant genomes sequenced
+- `genomes`: Number samples sequenced
+- `cases`: Total number of cases in that region and that week
+
 ## Log of Registered Changes to the Source Web Page
 
 Table of registered changes to the [source web page][2]. Only events
