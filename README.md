@@ -140,6 +140,7 @@ that broke web scraping is recorded. The list of events before
 | 2020-10-26 | Accumulated tests data for day 0 to 81 added from SSI's file `Test_pos_over_time.csv`. |
 | 2020-10-27 | Between 2020-06-19 and 2020-08-24 data was reported collectively on mondays, weekend data in this range interpolated. |
 | 2021-01-12 | Added data files `vaccinations.csv` and `private_testing.csv` |
+| 2021-02-08 | Added data file `mutant_data.csv` |
 
 ## License
 
