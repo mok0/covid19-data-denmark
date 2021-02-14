@@ -1,4 +1,10 @@
 day,year,week,variant,ireg,region,positive,genomes,cases
+237,2020,42,20e-eu1,1,nordjylland,3,138,329
+237,2020,42,20e-eu1,2,midtjylland,67,208,677
+237,2020,42,20e-eu1,3,syddanmark,14,149,548
+237,2020,42,20e-eu1,4,copenhagen,121,449,1307
+237,2020,42,20e-eu1,5,sjaelland,29,93,280
+237,2020,42,20e-eu1,6,whole_denmark,228,1037,3199
 237,2020,42,b117,1,nordjylland,0,138,329
 237,2020,42,b117,2,midtjylland,0,208,677
 237,2020,42,b117,3,syddanmark,0,149,548
