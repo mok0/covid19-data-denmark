@@ -56,6 +56,7 @@ following columns:
 the dataset `Newly_admitted_over_time.csv` that can be found in a zip-archive
 updated on weekdays and published on [SSIs web page][3].
 
+All other data is scraped from SSI's [COVID-19 dashboard][covid-19-dashboard].
 
 ### vaccinations.csv
 
@@ -71,6 +72,10 @@ file published by SSI on weekdays.
 - `vaccination2_accum`: Accumulated number of second vaccination
 - `vaccination2_today`: Today's number of second vaccination
 
+From the date 2021-02-22 SSI is publishing daily vaccination numbers
+on their [vaccination dashboard][vacc-dashboard], rather than from at
+table in a daily PDF file. It means yesterday's numbers are presented
+as today's; therefore there is no data for day 363 (2021-02-21).
 
 ### private_testing.csv
 
@@ -141,6 +146,7 @@ that broke web scraping is recorded. The list of events before
 | 2020-10-27 | Between 2020-06-19 and 2020-08-24 data was reported collectively on mondays, weekend data in this range interpolated. |
 | 2021-01-12 | Added data files `vaccinations.csv` and `private_testing.csv` |
 | 2021-02-08 | Added data file `mutant_data.csv` |
+| 2021-02-22 | SSI now published daily vaccination numbers on their vaccination dashboard |
 
 ## License
 
@@ -165,3 +171,5 @@ that broke web scraping is recorded. The list of events before
 [1]: https://en.ssi.dk/about-us
 [2]: https://www.sst.dk/da/corona/tal-og-overvaagning
 [3]: https://www.ssi.dk/sygdomme-beredskab-og-forskning/sygdomsovervaagning/c/covid19-overvaagning
+[covid-19-dashboard]: https://experience.arcgis.com/experience/aa41b29149f24e20a4007a0c4e13db1d/page/page_0/
+[vacc-dashboard]: https://experience.arcgis.com/experience/1c7ff08f6cef4e2784df7532d16312f1
