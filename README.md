@@ -52,6 +52,13 @@ following columns:
 - `respirator_change`: Change in number of patients in ventilators since
   the day before.
 
+Note: The data from the date 2021-03-10 contains errors in the
+numbers. On this date, SSI began pooling antigen and PCR data from
+private test centres to the official ones, and apparently an error was
+made. This is _extremely_ bad, since there are many consumers of the
+data published by SSI, and that data is now tainted, since we don't
+know how many patients appear two or more times in the statistics.
+
 (*) The data in the `hospitalized_admitted` column is extracted from
 the dataset `Newly_admitted_over_time.csv` that can be found in a zip-archive
 updated on weekdays and published on [SSIs web page][3].
@@ -100,6 +107,10 @@ the data in the file `covid19-data-denmark.csv`.
 - `infected_ag_accum`: Infected patients found by antigen testing, accumulated
 - `infected_ag_today`: Infected patients found by antigen testing, today
 
+Note: This data is not published after 2021-03-10. After this date,
+the numbers implicitly appear in `covid19-data-denmark.csv`. Extremely
+poor data reporting practice, but what can we do?
+
 ### mutant_data.csv
 
 This file contains sequencing data on positive SARS-CoV-2 samples. The
@@ -147,6 +158,8 @@ that broke web scraping is recorded. The list of events before
 | 2021-01-12 | Added data files `vaccinations.csv` and `private_testing.csv` |
 | 2021-02-08 | Added data file `mutant_data.csv` |
 | 2021-02-22 | SSI now published daily vaccination numbers on their vaccination dashboard |
+| 2021-03-10 | From this date, SSI adds testing data from private test centres, antigen and PCR are pooled. This is very bad. |
+
 
 ## License
 
