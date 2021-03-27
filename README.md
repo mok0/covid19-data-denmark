@@ -30,17 +30,17 @@ following columns:
    not provided before 2020-05-15.
 - `tests_today`: Tests reported on this date. This data was not
    provided before 2020-05-16.
-- `tested_accum`: Accumulated number of tested persons. Daily updates
+- `tested_accum`: Accumulated number of tested persons by PCR. Daily updates
   to this data was not provided before 2020-03-02, the total of all
   tested persons before that (358) are recorded on this day.
-- `tested_today`: Persons tested on this day.
-- `infected_accum`: Accumulated number of confirmed cases.
-- `infected_today`: Number of infected patients confirmed on this date.
+- `tested_today`: Persons PCR tested on this day that have not been tested before.
+- `infected_accum`: Accumulated number of confirmed cases by PCR test.
+- `infected_today`: Number of infected patients confirmed by PCR test on this date.
 - `dead_accum`: Accumulated number of deaths associated with the
   COVID-19 pandemic.
 - `dead_today`: Number of persons reported dead on this date.
-- `recovered_accum`: Accumulated number of recoveries.
-- `recovered_today`: Persons reported recovered on this date.
+- `recovered_accum`: Accumulated number of recoveries after positive PCR result.
+- `recovered_today`: Persons reported recovered on this date after positive PCR result.
 - `active`: Active cases. Computed per day using this formula:
   ```infected_accum - recovered_accum - dead_accum```
 - `hospitalized_now`: Number of patients currently hospitalized.
@@ -52,18 +52,52 @@ following columns:
 - `respirator_change`: Change in number of patients in ventilators since
   the day before.
 
-Note: The data from the date 2021-03-10 contains errors in the
-numbers. On this date, SSI began pooling antigen and PCR data from
-private test centres to the official ones, and apparently an error was
-made. This is _extremely_ bad, since there are many consumers of the
-data published by SSI, and that data is now tainted, since we don't
-know how many patients appear two or more times in the statistics.
-
 (*) The data in the `hospitalized_admitted` column is extracted from
 the dataset `Newly_admitted_over_time.csv` that can be found in a zip-archive
 updated on weekdays and published on [SSIs web page][3].
 
 All other data is scraped from SSI's [COVID-19 dashboard][covid-19-dashboard].
+
+
+Note1: 2021-03-10: The data from the date 2021-03-10 contains errors
+in the numbers. On this date, SSI began pooling antigen and PCR data
+from private test centres to the official ones, and apparently an
+error was made. This is _extremely_ bad, since there are many
+consumers of the data published by SSI, and that data is now tainted,
+since we don't know how many patients appear two or more times in the
+statistics.
+
+Note2: 2021-03-26. From this date, SSI has again revised the data
+reporting on their [COVID-19 dashboard][covid-19-dashboard]. Antigen
+tests and PCR tests are again separated. This means that data in the
+period 2021-03-10 (day 380) to 2021-03-25 (day 395) contained results
+from PCR + antigen tests, where many of the latter were false
+positives. Using various sources, including data scraped from [this page][tal-og-overvaagning],
+where PCR and Ag test numbers were given, the data in
+`covid19-data-denmark.csv` has been corrected so only PCR data is
+reported. The problem with antigen tests is that they are not
+conclusive, and patients are referred to an PCR tests to give the
+final answer. Corrections include the following:
+
+- `infected_accum` is now data from smitteapp.infected_accum for
+  `day >= 380 and day < 396`. The column `infected_today` is computed
+  from this as daily difference.
+- `tests_accum` contains data copied from the [SST webpage][tal-og-overvaagning]
+  as described above, and `tests_today` is computed from this as a daily
+  difference.
+- The data in the columns `recovered_accum` and `tested_accum` is only
+  reported on SSI's [COVID-19 dashboard][covid-19-dashboard], so a
+  correction procedure was carried out. Using the PCR-only values of
+  days 379 and 396, the true increase could be computed, and the data
+  was scaled proportionally to fit these constraints. This procedure
+  has removed data from the antigen tests, and further the huge
+  positive and negative spikes in the data resulting from the two
+  changes in data reporting practice by SSI. However data in the columns
+  `recovered_accum`, `recovered_today`, `tested_accum` and
+  `tested_today` should be considered *approximate* in the
+  range day 380 to day 395 as they are not the exact recorded numbers.
+
+
 
 ### vaccinations.csv
 
@@ -159,7 +193,8 @@ that broke web scraping is recorded. The list of events before
 | 2021-02-08 | Added data file `mutant_data.csv` |
 | 2021-02-22 | SSI now published daily vaccination numbers on their vaccination dashboard |
 | 2021-03-10 | From this date, SSI adds testing data from private test centres, antigen and PCR are pooled. This is very bad. |
-
+| 2021-03-25 | SSI have again changed their data reporting, now antigen tests are no longer included, so this day's numbers become negative if you check. Extremely bad. |
+| 2021-03-26 | Data has been corrected to exclude antigen test data, see notes 1 & 2 above |
 
 ## License
 
@@ -186,3 +221,4 @@ that broke web scraping is recorded. The list of events before
 [3]: https://www.ssi.dk/sygdomme-beredskab-og-forskning/sygdomsovervaagning/c/covid19-overvaagning
 [covid-19-dashboard]: https://experience.arcgis.com/experience/aa41b29149f24e20a4007a0c4e13db1d/page/page_0/
 [vacc-dashboard]: https://experience.arcgis.com/experience/1c7ff08f6cef4e2784df7532d16312f1
+[tal-og-overvaagning]: https://www.sst.dk/da/corona/Status-for-epidemien/tal-og-overvaagning
