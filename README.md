@@ -30,9 +30,10 @@ following columns:
    not provided before 2020-05-15.
 - `tests_today`: Tests reported on this date. This data was not
    provided before 2020-05-16.
-- `tested_accum`: Accumulated number of tested persons by PCR. Daily updates
-  to this data was not provided before 2020-03-02, the total of all
-  tested persons before that (358) are recorded on this day.
+- `tested_accum`: Accumulated number of tested persons by PCR tested
+  one or more times. Daily updates to this data was not provided
+  before 2020-03-02, the total of all tested persons before that (358)
+  are recorded on this day.
 - `tested_today`: Persons PCR tested on this day that have not been tested before.
 - `infected_accum`: Accumulated number of confirmed cases by PCR test.
 - `infected_today`: Number of infected patients confirmed by PCR test on this date.
@@ -97,6 +98,9 @@ final answer. Corrections include the following:
   `tested_today` should be considered *approximate* in the
   range day 380 to day 395 as they are not the exact recorded numbers.
 
+Note3: 2021-06-29. From this date, SSI no longer provides the data on
+first time tests, given in the fields `tested_today` and
+`tested_accum`.
 
 
 ### vaccinations.csv
